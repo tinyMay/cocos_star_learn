@@ -46,7 +46,7 @@ cc.Class({
     getPlayerDistance: function() {
         var playerPos = this.game.player.getPosition();
         var dist = cc.pDistance(this.node.position, playerPos);
-        if(++count < 20) {
+        if(++this.count < 20) {
             console.log(playerPos);
             console.log(this.node.position);
             console.log("dist:"+dist)
