@@ -71,6 +71,9 @@
     "_components": [
       {
         "__id__": 10
+      },
+      {
+        "__id__": 11
       }
     ],
     "_prefab": null,
@@ -152,8 +155,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 8,
-      "y": 10
+      "x": 0,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -216,8 +219,8 @@
     "_cascadeOpacityEnabled": true,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.4938407052555435,
-      "y": 1.4645455569818906
+      "x": 0.5,
+      "y": 1.45
     },
     "_contentSize": {
       "__type__": "cc.Size",
@@ -297,13 +300,13 @@
     "_cascadeOpacityEnabled": true,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0
+      "x": 6,
+      "y": 4
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 135
+      "width": 80,
+      "height": 80
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -311,8 +314,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 25,
-      "y": -116
+      "x": 0,
+      "y": 200
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -358,7 +361,8 @@
     "jumpHeight": 200,
     "jumpDuration": 0.3,
     "maxMoveSpeed": 400,
-    "accel": 350
+    "accel": 350,
+    "xSpeed": 0
   },
   {
     "__type__": "cc.Canvas",
@@ -375,5 +379,25 @@
     },
     "_fitWidth": false,
     "_fitHeight": true
+  },
+  {
+    "__type__": "3f2c1OzGDFEpblaNYalIG0C",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "starPrefab": {
+      "__uuid__": "4ca09465-1cc2-4f11-8379-20c217d64dd0"
+    },
+    "maxStarDuration": 5,
+    "minStarDUration": 3,
+    "ground": {
+      "__id__": 5
+    },
+    "player": {
+      "__id__": 7
+    }
   }
 ]

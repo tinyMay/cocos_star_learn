@@ -30,7 +30,8 @@ cc.Class({
         jumpHeight: 0,
         jumpDuration: 0,
         maxMoveSpeed: 0,
-        accel: 0
+        accel: 0,
+        xSpeed: 0
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -42,7 +43,7 @@ cc.Class({
         this.accLeft = false;
         this.accRight = false;
 
-        this.xSpeed = 0;
+        // this.xSpeed = 0;
         this.setInputControl();
     },
     setJumpAction: function() {
@@ -77,8 +78,10 @@ cc.Class({
 
     update: function(dt) {
         if(this.accLeft) {
+            // this.xSpeed = -20;
             this.xSpeed -= this.accel * dt;
         } else if(this.accRight) {
+            // this.xSpeed = 20;
             this.xSpeed += this.accel * dt;
         }
 
@@ -86,5 +89,6 @@ cc.Class({
             this.xSpeed = this.maxMoveSpeed * this.xSpeed / Math.abs(this.xSpeed);
         }
         this.node.x += this.xSpeed * dt;
+        // console.log("accLeft:"+this.accLeft+",accRight:"+this.accRight+",accel:"+this.accel+",xSpeed"+this.xSpeed);
     },
 });
