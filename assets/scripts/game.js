@@ -53,17 +53,18 @@ cc.Class({
 
     spawnNewStar: function() {
         var newStar = cc.instantiate(this.starPrefab);
-        newStar.parent = this.node;
-        // this.node.addChild(newStar);
+        // newStar.parent = this.node;
+        this.node.addChild(newStar);
         newStar.setPosition(this.getNewStarPosition());
         newStar.getComponent('star').game = this;
     },
     getNewStarPosition: function() {
         var randX = 0;
-        var randY = this.groundY + cc.random0To1() * this.player.getComponent("player").jumpHeight + 50;
+        // var randY = this.groundY + cc.random0To1() * this.player.getComponent("player").jumpHeight + 50;
+        var randY = this.groundY + this.player.getComponent("player").jumpHeight + cc.random0To1() * 50;
         var maxX = this.node.width/2;
-        // randX = cc.randomMinus1To1() * maxX;
-        randX = cc.random0To1() * this.node.width/10;
+        randX = cc.randomMinus1To1() * maxX;
+        // randX = cc.random0To1() * this.node.width;
         console.log("randX:"+randX+",randY:"+randY+",node.width:"+this.node.width)
         return cc.p(randX, randY);
     }
