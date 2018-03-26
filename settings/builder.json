@@ -1,0 +1,37 @@
+{
+  "appKey": "",
+  "appSecret": "",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": true,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.cocos_star_learn",
+  "privateKey": "",
+  "qqplay": {
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "startScene": "f836f60f-abc5-4638-ab78-4ed4e43aff64",
+  "title": "cocos_star_learn",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "appid": "wx40c4a76de735f47b",
+    "orientation": "landscape"
+  },
+  "xxteaKey": "d24f456b-4bdd-4e",
+  "zipCompressJs": true
+}

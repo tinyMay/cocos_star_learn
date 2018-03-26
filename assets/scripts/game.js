@@ -45,6 +45,10 @@ cc.Class({
             default: null,
             type: cc.Label
         },
+        controlDescDisplay: {
+            default: null,
+            type: cc.Label
+        },
         scoreAudio: {
             default: null,
             url: cc.AudioClip
@@ -54,12 +58,34 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad: function() {
+        var self = this;
         this.timer = 0;
         this.starDuration = 0;
         this.groundY = this.ground.y + this.ground.height/2;
         console.log("ground.y:"+this.ground.y+",ground.height:"+this.ground.height)
         this.spawnNewStar();
         this.score = 0;
+        this.player.getComponent('player').game = this;
+        // this.node.on("touchstart", function(event) {
+        //     var pos = event.touch._point;
+        //     console.log("touchstart")
+        //     console.log(event.touch._point);
+        //     if(pos.x < this.node.width/2) {
+        //         this.player.setTouchControl("start","left");
+        //     } else {
+        //         this.player.setTouchControl("start","right");
+        //     }
+        // }.bind(this));
+        // this.node.on("touchend", function(event) {
+        //     var pos = event.touch._point;
+        //     console.log("touchend")
+        //     console.log(event.touch._point);
+        //     if(pos.x < this.node.width/2) {
+        //         this.player.setTouchControl("end","left");
+        //     } else {
+        //         this.player.setTouchControl("end","right");
+        //     }
+        // }.bind(this));
     },
 
     spawnNewStar: function() {
