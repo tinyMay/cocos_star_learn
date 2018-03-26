@@ -40,15 +40,26 @@ cc.Class({
         player: {
             default: null,
             type: cc.Node
+        },
+        scoreDisplay: {
+            default: null,
+            type: cc.Label
+        },
+        scoreAudio: {
+            default: null,
+            url: cc.AudioClip
         }
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad: function() {
+        this.timer = 0;
+        this.starDuration = 0;
         this.groundY = this.ground.y + this.ground.height/2;
         console.log("ground.y:"+this.ground.y+",ground.height:"+this.ground.height)
         this.spawnNewStar();
+        this.score = 0;
     },
 
     spawnNewStar: function() {
@@ -57,6 +68,8 @@ cc.Class({
         this.node.addChild(newStar);
         newStar.setPosition(this.getNewStarPosition());
         newStar.getComponent('star').game = this;
+        this.starDuration = this.minStarDUration + cc.random0To1() * (this.maxStarDuration - this.minStarDUration);
+        this.timer = 0;
     },
     getNewStarPosition: function() {
         var randX = 0;
@@ -67,10 +80,25 @@ cc.Class({
         // randX = cc.random0To1() * this.node.width;
         console.log("randX:"+randX+",randY:"+randY+",node.width:"+this.node.width)
         return cc.p(randX, randY);
-    }
+    },
     // start () {
 
     // },
 
-    // update (dt) {},
+    update: function(dt) {
+        if(this.timer > this.starDuration) {
+            this.gameOver();
+            return;
+        }
+        this.timer += dt;
+    },
+    gainScore: function() {
+        this.score += 1;
+        this.scoreDisplay.string = 'Score: ' + this.score.toString();
+        cc.audioEngine.playEffect(this.scoreAudio, false);
+    },
+    gameOver: function() {
+        this.player.stopAllActions();
+        cc.director.loadScene('game');
+    }
 });

@@ -97,7 +97,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "pickRadius": 59.9,
+    "pickRadius": 30,
     "playerPos": 0,
     "position": 0,
     "dist": 0,
