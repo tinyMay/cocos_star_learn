@@ -66,26 +66,6 @@ cc.Class({
         this.spawnNewStar();
         this.score = 0;
         this.player.getComponent('player').game = this;
-        // this.node.on("touchstart", function(event) {
-        //     var pos = event.touch._point;
-        //     console.log("touchstart")
-        //     console.log(event.touch._point);
-        //     if(pos.x < this.node.width/2) {
-        //         this.player.setTouchControl("start","left");
-        //     } else {
-        //         this.player.setTouchControl("start","right");
-        //     }
-        // }.bind(this));
-        // this.node.on("touchend", function(event) {
-        //     var pos = event.touch._point;
-        //     console.log("touchend")
-        //     console.log(event.touch._point);
-        //     if(pos.x < this.node.width/2) {
-        //         this.player.setTouchControl("end","left");
-        //     } else {
-        //         this.player.setTouchControl("end","right");
-        //     }
-        // }.bind(this));
     },
 
     spawnNewStar: function() {
@@ -99,9 +79,8 @@ cc.Class({
     },
     getNewStarPosition: function() {
         var randX = 0;
-        // var randY = this.groundY + cc.random0To1() * this.player.getComponent("player").jumpHeight + 50;
         var randY = this.groundY + this.player.getComponent("player").jumpHeight + cc.random0To1() * 50;
-        var maxX = this.ground.width/2;
+        var maxX = this.ground.width/2 - this.starPrefab.data.width;
         randX = cc.randomMinus1To1() * maxX;
         // randX = cc.random0To1() * this.node.width;
         console.log("randX:"+randX+",randY:"+randY+",ground.width:"+this.ground.width)

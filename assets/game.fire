@@ -370,8 +370,7 @@
     "xSpeed": 0,
     "jumpAudio": {
       "__uuid__": "dc194f1a-c8a5-46ca-aaf9-f03b70974af5"
-    },
-    "ground": null
+    }
   },
   {
     "__type__": "cc.Node",
@@ -491,7 +490,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 120,
+      "x": 100,
       "y": 420
     },
     "_skewX": 0,

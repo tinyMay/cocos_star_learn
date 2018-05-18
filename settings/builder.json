@@ -4,19 +4,19 @@
   "encryptJs": true,
   "excludeScenes": [],
   "fb-instant-games": {},
-  "includeAnySDK": false,
+  "includeAnySDK": true,
   "includeSDKBox": false,
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
   "jailbreakPlatform": false,
-  "md5Cache": true,
+  "md5Cache": false,
   "mergeStartScene": false,
   "oauthLoginServer": "",
   "optimizeHotUpdate": false,
   "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
+    "landscapeLeft": false,
+    "landscapeRight": false,
+    "portrait": true,
     "upsideDown": false
   },
   "packageName": "org.cocos2d.cocos_star_learn",
@@ -30,7 +30,7 @@
   "webOrientation": "portrait",
   "wechatgame": {
     "appid": "wx40c4a76de735f47b",
-    "orientation": "landscape"
+    "orientation": "portrait"
   },
   "xxteaKey": "d24f456b-4bdd-4e",
   "zipCompressJs": true

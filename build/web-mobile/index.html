@@ -37,7 +37,7 @@
   <!--<link rel="apple-touch-icon" href=".png" />-->
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
 
-  <link rel="stylesheet" type="text/css" href="style-mobile.c7445.css"/>
+  <link rel="stylesheet" type="text/css" href="style-mobile.css"/>
 
 </head>
 <body>
@@ -47,8 +47,20 @@
       <span style="width: 0%"></span>
     </div>
   </div>
-<script src="src/settings.3858d.js" charset="utf-8"></script>
+<script src="src/settings.js" charset="utf-8"></script>
 
-<script src="main.e7249.js" charset="utf-8"></script>
+<script src="main.js" charset="utf-8"></script>
+
+<script charset="utf-8" id="protocols" type="text/javascript">
+  var protocols = document.createElement("script");
+  protocols.onload = function () {
+    anysdk.agentManager.init();
+    anysdk.agentManager.loadAllPlugins(function (code, msg) {
+    });
+  };
+  protocols.src = "http://statics.h5.anysdk.com/protocols/protocols.js";
+  document.body.appendChild(protocols);
+</script>
+
 </body>
 </html>

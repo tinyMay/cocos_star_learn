@@ -12,21 +12,6 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
         jumpHeight: 0,
         jumpDuration: 0,
         maxMoveSpeed: 0,
@@ -114,8 +99,6 @@ cc.Class({
                 self.accRight = true;
             }
         } else {
-            // self.accLeft = false;
-            // self.accRight = false;
             if(dir == 'left') {
                 self.accLeft = false;
             } else {
@@ -139,8 +122,8 @@ cc.Class({
         }
         var x = this.node.x + this.xSpeed * dt;
         this.groundWidth = this.game.ground.width;
-        var xL = -this.groundWidth/2 + this.node.width/2;
-        var xR = this.groundWidth/2 - this.node.width/2;
+        var xL = -this.groundWidth/2 + this.node.width;
+        var xR = this.groundWidth/2 - this.node.width;
         if(x < xL) {
             this.node.x = xL;
         } else if(x > xR) {
