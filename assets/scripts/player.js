@@ -37,11 +37,11 @@ cc.Class({
         this.accLeft = false;
         this.accRight = false;
         this.gameWidth = this.game.node.width;
-        console.log("gameWidth:"+this.gameWidth)
+        // console.log("gameWidth:"+this.gameWidth)
         this.setInputControl();
         this.game.node.on("touchstart", function(event) {
             var pos = event.touch._point;
-            console.log("touchstart: pos.x:"+pos.x);
+            // console.log("touchstart: pos.x:"+pos.x);
             if(pos.x < self.gameWidth/2) {
                 self.setTouchControl("start","left");
             } else {
@@ -50,7 +50,7 @@ cc.Class({
         });
         this.game.node.on("touchend", function(event) {
             var pos = event.touch._point;
-            console.log("touchend: pos.x:"+pos.x+",self.game.node.width:"+self.game.node.width)
+            // console.log("touchend: pos.x:"+pos.x+",self.game.node.width:"+self.game.node.width)
             if(pos.x < self.gameWidth/2) {
                 self.setTouchControl("end","left");
             } else {
@@ -105,7 +105,7 @@ cc.Class({
                 self.accRight = false;
             }
         }
-        console.log("setTouchControl:  self.accLeft:"+self.accLeft+",self.accRight:"+self.accRight)
+        // console.log("setTouchControl:  self.accLeft:"+self.accLeft+",self.accRight:"+self.accRight)
     },
     update: function(dt) {
         // console.log("update setTouchControl:  self.accLeft:"+self.accLeft+",self.accRight:"+self.accRight)

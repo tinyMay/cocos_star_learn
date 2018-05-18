@@ -33,6 +33,12 @@ cc.Class({
         },
         maxStarDuration: 0,
         minStarDUration: 0,
+        bgChangeGap: 3,
+
+        background: {
+            default: null,
+            type: cc.Node
+        },
         ground: {
             default: null,
             type: cc.Node
@@ -62,10 +68,11 @@ cc.Class({
         this.timer = 0;
         this.starDuration = 0;
         this.groundY = this.ground.y + this.ground.height/2;
-        console.log("ground.y:"+this.ground.y+",ground.height:"+this.ground.height)
+        // console.log("ground.y:"+this.ground.y+",ground.height:"+this.ground.height)
         this.spawnNewStar();
         this.score = 0;
         this.player.getComponent('player').game = this;
+        this.bgArr = ["a.png","b.jpeg","c.jpeg","d.jpeg"];
     },
 
     spawnNewStar: function() {
@@ -83,7 +90,7 @@ cc.Class({
         var maxX = this.ground.width/2 - this.starPrefab.data.width;
         randX = cc.randomMinus1To1() * maxX;
         // randX = cc.random0To1() * this.node.width;
-        console.log("randX:"+randX+",randY:"+randY+",ground.width:"+this.ground.width)
+        // console.log("randX:"+randX+",randY:"+randY+",ground.width:"+this.ground.width)
         return cc.p(randX, randY);
     },
     // start () {
@@ -98,8 +105,20 @@ cc.Class({
         this.timer += dt;
     },
     gainScore: function() {
+        var self = this;
         this.score += 1;
         this.scoreDisplay.string = 'Score: ' + this.score.toString();
+        if(this.score > 0) {
+
+            var toChange = (this.score % this.bgChangeGap) == 0;
+            var bg = this.bgArr[(this.score / this.bgChangeGap) % 3];
+            console.log("toChange:"+toChange+",this.bgChangeGap:"+this.bgChangeGap+"this.score % this.bgChangeGap"+this.score % this.bgChangeGap)
+            // toChange && bg && this.background.getComponent(cc.Sprite).spriteFrame.setTexture(cc.url.raw('resources/background/'+bg)); 
+            toChange && bg && cc.loader.loadRes("background/"+bg, cc.SpriteFrame, function (err, spriteFrame) {
+                self.background.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+            });
+            // toChange && bg && cc.loader.releaseRes("background/"+bg, cc.SpriteFrame);
+        }
         cc.audioEngine.playEffect(this.scoreAudio, false);
     },
     gameOver: function() {
