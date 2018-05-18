@@ -99,8 +99,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 960,
-      "height": 640
+      "width": 640,
+      "height": 960
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -108,8 +108,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 480,
-      "y": 320
+      "x": 320,
+      "y": 480
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -151,8 +151,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1360,
-      "height": 760
+      "width": 640,
+      "height": 960
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -229,7 +229,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1350,
+      "width": 640,
       "height": 250
     },
     "_rotationX": 0,
@@ -468,9 +468,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 226,
-      "g": 167,
-      "b": 167,
+      "r": 241,
+      "g": 183,
+      "b": 183,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -482,7 +482,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 300,
-      "height": 40
+      "height": 80
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -490,8 +490,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 300,
-      "y": 240
+      "x": 120,
+      "y": 420
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -516,7 +516,7 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "长按左右屏幕控制跳动方向和速度",
+    "_N$string": "长按左半屏幕控制向左跳动和加速\n长按右半屏幕控制向右跳动和加速",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -532,8 +532,8 @@
     "_enabled": true,
     "_designResolution": {
       "__type__": "cc.Size",
-      "width": 960,
-      "height": 640
+      "width": 640,
+      "height": 960
     },
     "_fitWidth": false,
     "_fitHeight": true

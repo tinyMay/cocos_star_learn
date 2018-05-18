@@ -26,8 +26,8 @@
   },
   "renderMode": "0",
   "startScene": "f836f60f-abc5-4638-ab78-4ed4e43aff64",
-  "title": "cocos_star_learn",
-  "webOrientation": "auto",
+  "title": "cocos_star",
+  "webOrientation": "portrait",
   "wechatgame": {
     "appid": "wx40c4a76de735f47b",
     "orientation": "landscape"
