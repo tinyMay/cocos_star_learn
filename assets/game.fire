@@ -147,12 +147,12 @@
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0.5
+      "y": 0
     },
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 640,
-      "height": 960
+      "height": 763
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -161,7 +161,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0
+      "y": -280
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -179,7 +179,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "11b8244c-b6d9-4577-b37e-627b95227848"
+      "__uuid__": "2dc0cab3-84f3-4b75-b8e4-e89a771344af"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -239,7 +239,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 2.2737367544323206e-13,
-      "y": -250
+      "y": -390
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -257,7 +257,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "426627d4-14ef-471b-afee-9c1658251aac"
+      "__uuid__": "605deafb-663b-4914-9bca-c9f77e115842"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -306,12 +306,12 @@
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0.5
+      "y": 0
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 80,
-      "height": 80
+      "width": 96,
+      "height": 134
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -320,7 +320,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -80
+      "y": -220
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -338,7 +338,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "a7d32fc1-4a29-491e-a5e2-0892063d35d0"
+      "__uuid__": "958ca214-c4d1-4a9a-88d6-7bea41c50b76"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -392,9 +392,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 204,
+      "g": 196,
+      "b": 196,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -405,7 +405,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 183.33,
+      "width": 190.28,
       "height": 55.56
     },
     "_rotationX": 0,
@@ -415,7 +415,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 180
+      "y": 250
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -442,7 +442,7 @@
     },
     "_isSystemFontUsed": false,
     "_spacingX": 0,
-    "_N$string": "score: 0",
+    "_N$string": "Score: 0",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -468,9 +468,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 241,
-      "g": 183,
-      "b": 183,
+      "r": 238,
+      "g": 208,
+      "b": 208,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -481,7 +481,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 300,
+      "width": 220,
       "height": 80
     },
     "_rotationX": 0,
@@ -490,7 +490,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 100,
+      "x": 130,
       "y": 420
     },
     "_skewX": 0,
@@ -516,7 +516,7 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "长按左半屏幕控制向左跳动和加速\n长按右半屏幕控制向右跳动和加速",
+    "_N$string": "长按左半屏幕向左和加速\n长按右半屏幕向右和加速",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -547,10 +547,14 @@
     },
     "_enabled": true,
     "starPrefab": {
-      "__uuid__": "4ca09465-1cc2-4f11-8379-20c217d64dd0"
+      "__uuid__": "d9538af4-838e-442d-ae51-c953d6915321"
     },
     "maxStarDuration": 10,
     "minStarDUration": 6,
+    "bgChangeGap": 3,
+    "background": {
+      "__id__": 3
+    },
     "ground": {
       "__id__": 5
     },

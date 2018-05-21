@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Cocos Creator | cocos_star</title>
+  <title>传星</title>
 
   <!--http://www.html5rocks.com/en/mobile/mobifying/-->
   <meta name="viewport"
@@ -37,7 +37,7 @@
   <!--<link rel="apple-touch-icon" href=".png" />-->
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
 
-  <link rel="stylesheet" type="text/css" href="style-mobile.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.66173.cn/niuguo/cqzx/style-mobile.css"/>
 
 </head>
 <body>
@@ -45,23 +45,12 @@
   <div id="splash">
     <div class="progress-bar stripes">
       <span style="width: 0%"></span>
-      <div class="loading-tip">全力加载中。。。</div>
+      <div class="loading-tip">全力加载中...</div>
     </div>
   </div>
-<script src="src/settings.js" charset="utf-8"></script>
+<script src="//cdn.66173.cn/niuguo/cqzx/src/settings.js" charset="utf-8"></script>
 
-<script src="main.js" charset="utf-8"></script>
-
-<script charset="utf-8" id="protocols" type="text/javascript">
-  var protocols = document.createElement("script");
-  protocols.onload = function () {
-    anysdk.agentManager.init();
-    anysdk.agentManager.loadAllPlugins(function (code, msg) {
-    });
-  };
-  protocols.src = "http://statics.h5.anysdk.com/protocols/protocols.js";
-  document.body.appendChild(protocols);
-</script>
+<script src="//cdn.66173.cn/niuguo/cqzx/main.js" charset="utf-8"></script>
 
 </body>
 </html>

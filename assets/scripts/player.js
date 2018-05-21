@@ -43,8 +43,10 @@ cc.Class({
             var pos = event.touch._point;
             // console.log("touchstart: pos.x:"+pos.x);
             if(pos.x < self.gameWidth/2) {
+                self.node.setScale(-1, 1);
                 self.setTouchControl("start","left");
             } else {
+                self.node.setScale(1, 1);
                 self.setTouchControl("start","right");
             }
         });

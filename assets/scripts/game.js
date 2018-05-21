@@ -33,7 +33,7 @@ cc.Class({
         },
         maxStarDuration: 0,
         minStarDUration: 0,
-        bgChangeGap: 3,
+        bgChangeGap: 1,
 
         background: {
             default: null,
@@ -86,7 +86,7 @@ cc.Class({
     },
     getNewStarPosition: function() {
         var randX = 0;
-        var randY = this.groundY + this.player.getComponent("player").jumpHeight + cc.random0To1() * 50;
+        var randY = this.groundY + this.player.getComponent("player").jumpHeight + cc.random0To1() * this.starPrefab.data.height;
         var maxX = this.ground.width/2 - this.starPrefab.data.width;
         randX = cc.randomMinus1To1() * maxX;
         // randX = cc.random0To1() * this.node.width;
@@ -110,13 +110,16 @@ cc.Class({
         this.scoreDisplay.string = 'Score: ' + this.score.toString();
         if(this.score > 0) {
 
-            var toChange = (this.score % this.bgChangeGap) == 0;
-            var bg = this.bgArr[(this.score / this.bgChangeGap) % 3];
-            console.log("toChange:"+toChange+",this.bgChangeGap:"+this.bgChangeGap+"this.score % this.bgChangeGap"+this.score % this.bgChangeGap)
-            // toChange && bg && this.background.getComponent(cc.Sprite).spriteFrame.setTexture(cc.url.raw('resources/background/'+bg)); 
-            toChange && bg && cc.loader.loadRes("background/"+bg, cc.SpriteFrame, function (err, spriteFrame) {
-                self.background.getComponent(cc.Sprite).spriteFrame = spriteFrame;
-            });
+            // var toChange = (this.score % this.bgChangeGap) == 0;
+            // var bg = this.bgArr[(this.score / this.bgChangeGap) % (this.bgArr.length - 1)];
+            // console.log("toChange:"+toChange+",this.bgChangeGap:"+this.bgChangeGap+"this.score % this.bgChangeGap"+this.score % this.bgChangeGap)
+            // toChange && bg && cc.loader.loadRes("background/"+bg, cc.SpriteFrame, function (err, spriteFrame) {
+            //     self.background.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+            // });
+            // toChange && bg && cc.loader.load("//www.66173yx.com/cqzx/resources/background/"+bg, function (err, texture) {
+            //     var frame = new cc.SpriteFrame(texture);
+            //     self.background.getComponent(cc.Sprite).spriteFrame=frame;
+            // });
             // toChange && bg && cc.loader.releaseRes("background/"+bg, cc.SpriteFrame);
         }
         cc.audioEngine.playEffect(this.scoreAudio, false);

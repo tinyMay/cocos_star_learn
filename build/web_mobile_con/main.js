@@ -1,7 +1,7 @@
 (function () {
 
     'use strict';
-
+    var resPrefix = "//cdn.66173.cn/niuguo/cqzx/";
     function boot () {
 
         var settings = window._CCSettings;
@@ -81,7 +81,10 @@
             progressBar.style.width = '0%';
 
             cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () {
-                splash.style.display = 'none';
+                setTimeout(function() {
+                    splash.style.display = 'none';
+                }, 2000)
+                
             });
         }
 
@@ -122,8 +125,8 @@
 
             // init assets
             cc.AssetLibrary.init({
-                libraryPath: 'res/import',
-                rawAssetsBase: 'res/raw-',
+                libraryPath: 'cqzx/res/import',
+                rawAssetsBase: 'cqzx/res/raw-',
                 rawAssets: settings.rawAssets,
                 packedAssets: settings.packedAssets,
                 md5AssetsMap: settings.md5AssetsMap
@@ -150,9 +153,9 @@
 
         // jsList
         var jsList = settings.jsList;
-        var bundledScript = settings.debug ? 'src/project.dev.js' : 'src/project.js';
+        var bundledScript = settings.debug ? resPrefix + 'src/project.dev.js' : resPrefix + 'src/project.js';
         if (jsList) {
-            jsList = jsList.map(function (x) { return 'src/' + x; });
+            jsList = jsList.map(function (x) { return resPrefix + 'src/' + x; });
             jsList.push(bundledScript);
         }
         else {
@@ -219,7 +222,7 @@
 
         var cocos2d = document.createElement('script');
         cocos2d.async = true;
-        cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js';
+        cocos2d.src = window._CCSettings.debug ? resPrefix + 'cocos2d-js.js' : resPrefix + 'cocos2d-js-min.js';
 
         var engineLoaded = function () {
             document.body.removeChild(cocos2d);
