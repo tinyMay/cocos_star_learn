@@ -147,12 +147,12 @@
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0
+      "y": 0.5
     },
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 640,
-      "height": 763
+      "height": 960
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -161,7 +161,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -280
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -179,7 +179,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "2dc0cab3-84f3-4b75-b8e4-e89a771344af"
+      "__uuid__": "5ef4e4de-ca5c-4e37-974f-37fc0d7889ba"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -239,7 +239,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 2.2737367544323206e-13,
-      "y": -390
+      "y": -200
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -256,9 +256,7 @@
       "__id__": 5
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "605deafb-663b-4914-9bca-c9f77e115842"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 0,
     "_fillType": 0,
@@ -306,12 +304,12 @@
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0
+      "y": 0.5
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 96,
-      "height": 134
+      "width": 170,
+      "height": 160
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -320,7 +318,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -220
+      "y": -50
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -338,7 +336,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "958ca214-c4d1-4a9a-88d6-7bea41c50b76"
+      "__uuid__": "76788c01-29f4-491a-b752-8dc54260876d"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -415,7 +413,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 250
+      "y": 300
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -468,9 +466,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 238,
-      "g": 208,
-      "b": 208,
+      "r": 58,
+      "g": 42,
+      "b": 42,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,

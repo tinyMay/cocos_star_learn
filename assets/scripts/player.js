@@ -124,8 +124,8 @@ cc.Class({
         }
         var x = this.node.x + this.xSpeed * dt;
         this.groundWidth = this.game.ground.width;
-        var xL = -this.groundWidth/2 + this.node.width;
-        var xR = this.groundWidth/2 - this.node.width;
+        var xL = -this.groundWidth/2 + this.node.width/2;
+        var xR = this.groundWidth/2 - this.node.width/2;
         if(x < xL) {
             this.node.x = xL;
         } else if(x > xR) {
