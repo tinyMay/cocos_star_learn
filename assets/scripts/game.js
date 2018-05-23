@@ -87,7 +87,7 @@ cc.Class({
     getNewStarPosition: function() {
         var randX = 0;
         var randY = this.groundY + this.player.getComponent("player").jumpHeight + cc.random0To1() * this.starPrefab.data.height;
-        var maxX = this.ground.width/2 - this.starPrefab.data.width;
+        var maxX = this.ground.width/2 - 2 * this.starPrefab.data.width;
         randX = cc.randomMinus1To1() * maxX;
         // randX = cc.random0To1() * this.node.width;
         // console.log("randX:"+randX+",randY:"+randY+",ground.width:"+this.ground.width)

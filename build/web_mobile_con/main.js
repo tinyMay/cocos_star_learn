@@ -82,9 +82,25 @@
 
             cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () {
                 setTimeout(function() {
-                    splash.style.display = 'none';
+                    // 开始游戏按钮
+                    if(window.document) {
+                        var startGame = document.getElementById("startGame");
+                        var loadingTip = document.getElementById("loadingTip");
+                        startGame.style.display = "block";
+                        loadingTip.style.display = "none";
+                        progressBar.style.display = "none";
+                        startGame.addEventListener("click", function() {
+                            splash.style.display = 'none';
+                            try {
+                                window.webkit.messageHandlers.sdkroleinfo.postMessage("roleId=1000&roleName=AppleRole&roleLevel=1&zoneId=1&zoneName=AppleSer");
+                            } catch(e) {
+                                console.log("not in app");
+                            }
+                        })
+                    } else {
+                        splash.style.display = 'none';
+                    }
                 }, 2000)
-                
             });
         }
 
@@ -155,7 +171,7 @@
         var jsList = settings.jsList;
         var bundledScript = settings.debug ? resPrefix + 'src/project.dev.js' : resPrefix + 'src/project.js';
         if (jsList) {
-            jsList = jsList.map(function (x) { return resPrefix + 'src/' + x; });
+            jsList = jsList.map(function (x) { return 'src/' + x; });
             jsList.push(bundledScript);
         }
         else {
@@ -232,6 +248,7 @@
         };
         cocos2d.addEventListener('load', engineLoaded, false);
         document.body.appendChild(cocos2d);
+
     }
 
 })();
